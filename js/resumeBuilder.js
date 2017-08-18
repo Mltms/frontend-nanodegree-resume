@@ -13,9 +13,7 @@ var bio = {
 	"Java", "Javascript", "html", "CSS"
 	],
 	"biopic": "images/lastme.png"
-}
-
-
+};
 
 var education = {
 	"schools": [
@@ -36,9 +34,9 @@ var education = {
 		"dates": "2017",
 		"url": "https://www.udacity.com/",
 		"logo": "images/ud2.png"
-		},
+		}
 	]
-}
+};
 
 // Demo data
 var work = {
@@ -52,7 +50,7 @@ var work = {
 		"logo": "images/google.png"
     }
 	   ]
-}
+};
 
 var projects = {
 	"projects": [
@@ -69,7 +67,7 @@ var projects = {
 		"logo": "images/project2.png"
 	}
 	]
-}
+};
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -78,7 +76,7 @@ var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMsg)
+var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMsg);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);	
@@ -95,14 +93,14 @@ $("#header").append(formattedWelcomeMsg);
 $("#header").append(HTMLskillsStart);
 
 function displaySkills() {
-	for (skill in bio.skills) {
+	for (var skill in bio.skills) {
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#header").append(formattedSkills);
 	}
 }
 
 function displayWork() {
-	for (job in work.jobs){
+	for (var job in work.jobs){
 		$("#workExperience").append(HTMLworkStart);
 	
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -122,7 +120,7 @@ function displayWork() {
 
 
 projects.display = function() {
-	for (project in projects.projects) {
+	for (var project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 		
 	var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -135,10 +133,10 @@ projects.display = function() {
 	var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 	$(".project-entry:last").append(formattedDescription);		
 	}
-}
+};
 
 function displayEducation() {
-	for (sch in education.schools) {
+	for (var sch in education.schools) {
 		$("#education").append(HTMLschoolStart);
 		
 		var formattedSchool = HTMLschoolName.replace("%data%", education.schools[sch].school);
