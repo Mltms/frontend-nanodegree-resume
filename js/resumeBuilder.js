@@ -20,7 +20,7 @@ var education = {
         "name": "King Saud University",
         "location": "Diriyah ,Riyadh , Saudi Arabia",
         "degree": "Bachelors - Data scince",
-        "major": "Data scince,Front End Development ",
+        "major": ["Data scince,Front End Development"],
         "dates": "2014 - Present",
         "url": "http://ksu.edu.sa",
         "logo": "images/last2.png"
@@ -141,7 +141,7 @@ education.display = function() {
         var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[s].majors);
         $('.education-entry:last').append(formattedSchoolMajor);
     }
-    $('.education-entry:last').append(HTMLonlineClasses);
+        $('.education-entry:last').append(HTMLonlineClasses);
     for (var online = 0; online < education.onlineCourses.length; online++) {
 
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
