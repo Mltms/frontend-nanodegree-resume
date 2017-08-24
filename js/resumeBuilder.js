@@ -20,7 +20,7 @@ var education = {
         "name": "King Saud University",
         "location": "Diriyah ,Riyadh , Saudi Arabia",
         "degree": "Bachelors - Data scince",
-        "major": ["Data scince,Front End Development"],
+        "majors": ["Data scince,Front End Development"],
         "dates": "2014 - Present",
         "url": "http://ksu.edu.sa",
         "logo": "images/last2.png"
